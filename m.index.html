@@ -8,6 +8,7 @@
   <!-- twitter card -->
   <!-- favicon -->
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/popup.css">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
   <title>할리스</title>
   <style>
@@ -113,62 +114,6 @@
       font-size: 0.8em;
       color: var(--sub-color07);
       text-align: center;
-    }
-    .popup{
-      display: none;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      width: 360px;
-      box-shadow:0 0 3px rgba(0,0,0,0.6);
-    }
-    .popup .container{
-      position: relative;
-    }
-    .popup h2{
-      display: none;
-    }
-    .popup .btn-container button{
-      width: 50%;
-      border: none;
-      padding: 16px;
-      background: transparent;
-      text-align: center;
-    }
-    .popup .btn-container button:first-child{
-      float: left;
-      background: var(--sub-color07);
-    }
-    .popup .btn-container button:last-child{
-      float: right;
-      font-weight: 700;
-      background: var(--sub-color07);
-    }
-    .popup .container>button{
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      width: 16px;
-      height: 16px;
-      border: none;
-      background: transparent;
-      font-size: 0;
-    }
-    .popup .container>button::before,
-    .popup .container>button::after{
-      content: '';
-      display: block;
-      width: 17px;
-      height: 1px;
-      background: #000;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%) rotate(45deg);
-    }
-    .popup .container>button::after{
-      transform: translate(-50%,-50%) rotate(-45deg);
     }
     .main-banner{
       position: relative;
@@ -541,7 +486,18 @@
   <script src="./js/jquery.min.js"></script>
   <script src="./js/jquery.cookie.min.js"></script>
   <script src="./js/myFunction.js"></script>
+  <!-- <script src="./js/popup.js"></script> -->
   <script> 
+    // selectPage();
+    // 작동이 잘안됨 -> 구글링해보기!
+    let osString = navigator.userAgent;
+    if(osString.indexOf('Window')>=0){
+      // 모바일환경
+      location.href='https://https://pam7461.github.io/hollys/m.index.html/';
+    }
+
+
+
     myObj.key01();
     myObj.key02();
     myObj.key03();
